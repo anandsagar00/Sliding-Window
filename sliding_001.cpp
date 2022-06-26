@@ -27,7 +27,7 @@ int main()
     for(int i=k;i<n;i++)
     {
         sum=sum+arr[i];//adding the new element
-        sum=sum-arr[i-k];//removing the first element 
+        sum=sum-arr[i-k];//removing the first element
 
         if(sum>max_sum)
         max_sum=sum;
