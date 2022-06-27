@@ -26,20 +26,17 @@ int main()
 
    while(j<n)
    {
-        if((j-i+1)<=k)
+        current_sum+=arr[j];
+        if((j-i+1)<k)
         {
-            current_sum+=arr[j];
             j++;
         }
-
-        else
+        else if(j-i+1==k)
         {
-            current_sum=current_sum-arr[i]+arr[j]; //subtracting the first element and adding the new element
-            i++;
-            j++;
-            if(current_sum>max_sum)
-            max_sum=current_sum;
+            max_sum=max(max_sum,current_sum);
+            current_sum-=arr[i];
+            i++,j++;
         }
    }
-   cout<<"Max subarray sum of size k is : "<<max_sum;
+   cout<<"Max subarray sum of size k is : "<<max(max_sum,current_sum);
 }
