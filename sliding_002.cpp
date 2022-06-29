@@ -41,6 +41,8 @@ int main()
                 cout<<negative_numbers.front()<<" ";
                 //while changing the window we should check if the first element of prev window is present at front of queue
                 //if yes then remove else don't
+                //as it denotes that the first element of previous window was -ve now when window will change then we don't require 
+                //the first element of prev window
                 if(arr[i]==negative_numbers.front())
                 {
                     negative_numbers.pop();
